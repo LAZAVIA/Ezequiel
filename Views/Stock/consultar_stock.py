@@ -10,8 +10,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_ConsultarStock(object):
 
-    def __init__(self):
-        self.consultarstock_controller = ConsultarStockController(self)
+    #def __init__(self): SI SE LO SACO SÍ ABRE LA PANTALLA
+        #LINEA 15 REVISAR
+        #self.product = Product(connection()) ESTO PARECE QUE FALTA QUE SÍE STÁ EN PRINCIPAL
+        #self.ConsultarStock = ConsultarStock(self)
 
     def setupUi(self, ConsultarStock):
         ConsultarStock.setObjectName("ConsultarStock")
@@ -107,7 +109,7 @@ class Ui_ConsultarStock(object):
 
     def retranslateUi(self, ConsultarStock):
         _translate = QtCore.QCoreApplication.translate
-        Ui_AgregarProducto.setWindowTitle(_translate("ConsultarStock", "MainWindow"))
+        ConsultarStock.setWindowTitle(_translate("ConsultarStock", "MainWindow"))
         self.label.setText(_translate("ConsultarStock", "Ventana Principal"))
         item = self.table_product.horizontalHeaderItem(0)
         item.setText(_translate("ConsultarStock", "CODIGO"))
@@ -127,6 +129,8 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     ConsultarStock = QtWidgets.QMainWindow()
+
+    #REVISAR
     ui = Ui_ConsultarStock()
     ui.setupUi(ConsultarStock)
     ConsultarStock.show()

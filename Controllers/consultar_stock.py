@@ -15,7 +15,7 @@ class ConsultarStockController():
         self.ConsultarStock = ConsultarStock
     
     def listProducts(self):
-        table = self.principal.table_product
+        table = self.ConsultarStock.table_product
         products = self.product.getProducts()
         table.setRowCount(0)
         for row_number, row_data in enumerate(products):
@@ -24,7 +24,7 @@ class ConsultarStockController():
                 table.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(data)))
 
     def showProduct(self):
-        table = self.principal.table_product
+        table = self.ConsultarStock.table_product
         if table.currentItem() != None:
             cod = table.currentItem().text()
             print(cod)
@@ -44,7 +44,7 @@ class ConsultarStockController():
                 x = msg.exec_()
     
     def updateProducs(self):
-        table = self.principal.table_product
+        table = self.ConsultarStock.table_product
         products = []
         fila = []
         for row_number in range(table.rowCount()):
@@ -62,16 +62,16 @@ class ConsultarStockController():
         self.listProducts()
     
     def deleteProduct(self):
-        table = self.principal.table_product
+        table = self.ConsultarStock.table_product
         if table.currentItem() != None:
             cod = table.currentItem().text()
             product = self.product.getProduct(cod)
             if product:
                 self.product.deleteProduct(cod)
         self.listProducts()
-    
+    #REVISAR
     def openCreate(self, Ui_AgregarProducto):
-        self.principal.Form = QtWidgets.QWidget()
-        self.principal.ui = Ui_AgregarProducto()
-        self.principal.ui.setupUi(self.principal.Form)
-        self.principal.Form.show()
+        self.ConsultarStock.Form = QtWidgets.QWidget()
+        self.ConsultarStock.ui = Ui_AgregarProducto()
+        self.ConsultarStock.ui.setupUi(self.ConsultarStock.Form)
+        self.ConsultarStock.Form.show()
