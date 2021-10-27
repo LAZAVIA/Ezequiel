@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(529, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_AgregarProducto(object):
+    def setupUi(self, AgregarProducto):
+        AgregarProducto.setObjectName("MainWindow")
+        AgregarProducto.resize(529, 600)
+        self.centralwidget = QtWidgets.QWidget(AgregarProducto)
         self.centralwidget.setObjectName("centralwidget")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(50, 30, 441, 311))
@@ -170,21 +170,21 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_agregar_2.setFont(font)
         self.btn_agregar_2.setObjectName("btn_agregar_2")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        AgregarProducto.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(AgregarProducto)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 529, 21))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        AgregarProducto.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(AgregarProducto)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        AgregarProducto.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(AgregarProducto)
+        QtCore.QMetaObject.connectSlotsByName(AgregarProducto)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, AgregarProducto):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        AgregarProducto.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.input_precio.setPlaceholderText(_translate("MainWindow", "fecha_ingreso"))
         self.label_5.setText(_translate("MainWindow", "Fecha Ingreso:"))
         self.nombre.setText(_translate("MainWindow", "Nombre: "))
@@ -209,8 +209,8 @@ class Ui_MainWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    AgregarProducto = QtWidgets.QMainWindow()
+    ui = Ui_AgregarProducto()
+    ui.setupUi(AgregarProducto)
+    AgregarProducto.show()
     sys.exit(app.exec_())
