@@ -25,21 +25,30 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0" colspan="5">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="lbl_consultar_stock">
        <property name="font">
         <font>
-         <pointsize>28</pointsize>
+         <pointsize>22</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>Ventana Principal</string>
+        <string>CONSULTAR STOCK</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="5">
-      <widget class="QTableWidget" name="table_product">
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="rowCount">
         <number>10</number>
        </property>

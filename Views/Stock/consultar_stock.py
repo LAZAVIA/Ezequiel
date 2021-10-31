@@ -4,7 +4,7 @@ myDir = os.getcwd()
 sys.path.append(myDir)
 
 from Controllers.consultar_stock import ConsultarStockController
-from Views.Stock.Agregar_Producto_Ezequiel_ui import Ui_AgregarProducto
+from Views.Stock.agregar_producto_ui import Ui_AgregarProducto
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
