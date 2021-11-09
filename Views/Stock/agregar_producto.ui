@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Ezequiel</class>
+ <widget class="QMainWindow" name="Ezequiel">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>650</width>
-    <height>550</height>
+    <width>645</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ezequiel</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
@@ -307,12 +307,17 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>650</width>
+     <width>645</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAgregar_Producto">
+   <property name="text">
+    <string>Agregar Producto</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
