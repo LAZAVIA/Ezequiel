@@ -12,7 +12,7 @@ class ConsultarStockController():
 
     def __init__(self, ConsultarStock):
         self.product = Product(connection())
-        self.ConsultarStock = ConsultarStock
+        self.consultar_stock = ConsultarStock
     
     def listProducts(self):
         table = self.ConsultarStock.table_product

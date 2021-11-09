@@ -6,7 +6,7 @@ sys.path.append(myDir)
 from Database.Connection import connection
 from Models.Product import Product
 
-class CreateProductController():
+class AgregarProductoController():
     def __init__(self, AgregarProducto):
         self.product = Product(connection())
         self.create_product = AgregarProducto

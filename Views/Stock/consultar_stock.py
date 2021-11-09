@@ -1,19 +1,13 @@
-import sys
-import os
-myDir = os.getcwd()
-sys.path.append(myDir)
-
-from Controllers.consultar_stock import ConsultarStockController
-from Views.Stock.agregar_producto_ui import Ui_AgregarProducto
+# 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 
 class Ui_ConsultarStock(object):
 
-    #def __init__(self): SI SE LO SACO SÍ ABRE LA PANTALLA
-        #LINEA 15 REVISAR
-        #self.product = Product(connection()) ESTO PARECE QUE FALTA QUE SÍE STÁ EN PRINCIPAL
-        #self.ConsultarStock = ConsultarStock(self)
+    def __init__(self, *args, **kwargs):
+        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
+        self.ConsultarStock = ConsultarStock(self)
 
     def setupUi(self, ConsultarStock):
         ConsultarStock.setObjectName("ConsultarStock")
@@ -99,13 +93,6 @@ class Ui_ConsultarStock(object):
 
         self.retranslateUi(ConsultarStock)
         QtCore.QMetaObject.connectSlotsByName(ConsultarStock)
-        #--------------------Events--------------------------------------
-        self.l = self.btn_list.clicked.connect(lambda:self.principal_controller.listProducts())
-        self.c = self.btn_create.clicked.connect(lambda:self.principal_controller.openCreate(Ui_AgregarProducto))
-        self.r = self.btn_read.clicked.connect(lambda:self.principal_controller.showProduct())
-        self.u = self.btn_update.clicked.connect(lambda:self.principal_controller.updateProducs())
-        self.d = self.btn_delete.clicked.connect(lambda:self.principal_controller.deleteProduct())
-        #--------------------End Events---------------------------------
 
     def retranslateUi(self, ConsultarStock):
         _translate = QtCore.QCoreApplication.translate
@@ -129,9 +116,9 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     ConsultarStock = QtWidgets.QMainWindow()
-
-    #REVISAR
     ui = Ui_ConsultarStock()
-    ui.setupUi(ConsultarStock)
+    ui.setupUi(
+        
+    )
     ConsultarStock.show()
     sys.exit(app.exec_())
