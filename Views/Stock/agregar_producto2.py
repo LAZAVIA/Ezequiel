@@ -1,5 +1,6 @@
 import sys
 import os
+from Views.Stock.agregar_producto import AgregarProducto
 from consultar_stock import *
 myDir = os.getcwd()
 sys.path.append(myDir)
@@ -15,7 +16,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
         self.setupUi(self)
         
         #--------------------Events--------------------------------------
-        self.x = self.btn_create.clicked.connect(lambda:self.ap_controller.createProduct(self.input_cod.text(),self.input_name.text(),self.input_price.text(),self.input_category.text(),AgregarProducto))
+        self.x = self.btn_create.clicked.connect(lambda:self.ap_controller.agregarProducto(self.input_nombre.string, AgregarProducto))
+        #cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio, AgregarProducto
         #--------------------End Events---------------------------------
 
 if __name__ == "__main__":
@@ -23,6 +25,3 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     app.exec_()
-#--------------------Events--------------------------------------
-        
-        #--------------------End Events---------------------------------

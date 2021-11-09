@@ -9,9 +9,9 @@ from Models.Product import Product
 class AgregarProductoController():
     def __init__(self, AgregarProducto):
         self.product = Product(connection())
-        self.create_product = AgregarProducto
+        self.agregar_producto = AgregarProducto
     
-    def createProduct(self,cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio, AgregarProducto):
+    def agregarProducto(self,cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio, AgregarProducto):
         if cod and lote and nombre and detalle and cantidad and fecha_ing and fecha_venc and precio:
             self.product.insertProduct(cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio)
             AgregarProducto.hide()
