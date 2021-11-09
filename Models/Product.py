@@ -4,14 +4,15 @@ class Product():
         with self.conn.cursor() as cursor:
             #VER SI ESTO SE QUEDA
             sql = """CREATE TABLE IF NOT EXISTS producto
-                        (COD VARCHAR(15) NOT NULL,
-                        LOTE VARCHAR(20) NOT NULL, 
-                        NOMBRE VARCHAR(50) NOT NULL,
-                        DETALLE TEXT(500),
-                        CANTIDAD INT(10) NOT NULL,
-                        FECHA_ING DATE NOT NULL,
-                        FECHA_VENC DATE NOT NULL)
-                        PRECIO (30) NOT NULL"""
+                        (COD INT NOT NULL,
+                        NOMBRE VARCHAR NOT NULL,
+                        CANTIDAD INT NOT NULL,
+                        STOCKMAX INT NOT NULL,
+                        STOCKMIN INT NOT NULL,
+                        FECHA_ING DATE NOT NULL, 
+                        FECHA_EGR DATE NOT NULL,
+                        FECHA_VTO DATE NOT NULL,
+                        PRECIO FLOAT NOT NULL)"""
             cursor.execute(sql)
             self.conn.commit()
     
@@ -30,19 +31,20 @@ class Product():
             if result:
                 return result
     
-    def updateProduct(self,cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio):
+    def updateProduct(self,cod,nombre,cantidad,stockmax,stockmin,fecha_ing,fecha_egr,fecha_vto,precio):
         with self.conn.cursor() as cursor:
             sql = """UPDATE producto SET
-            COD = %s, 
-            LOTE = %s, 
+            COD = %s,  
             NOMBRE = %s, 
-            DETALLE = %s, 
             CANTIDAD = %s, 
-            FECHA_ING = %s, 
-            FECHA_VENC = %s, 
+            STOCKMAX = %s,
+            STOCKMIN = %s,
+            FECHA_ING = %s,
+            FECHA_EGR = %s, 
+            FECHA_VTO = %s, 
             PRECIO = %s 
             WHERE cod = %s """
-            cursor.execute(sql,(cod, lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio))
+            cursor.execute(sql,(cod,nombre,cantidad,stockmax,stockmin,fecha_ing,fecha_egr,fecha_vto,precio))
             self.conn.commit()
 
     def deleteProduct(self,cod):
@@ -51,8 +53,8 @@ class Product():
             cursor.execute(sql, cod)
             self.conn.commit()
     
-    def insertProduct(self,cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio):
+    def insertProduct(self,cod, nombre, cantidad, stockmax, stockmin, fecha_ing, fecha_egr, fecha_vto, precio):
         with self.conn.cursor() as cursor:
-            sql = """INSERT INTO producto (cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"""
-            cursor.execute(sql, (cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio))
+            sql = """INSERT INTO producto (cod, nombre, cantidad, fecha_ing, fecha_egr, fecha_vto, precio) VALUES (%s,%s,%s,%s,%s,%s,%s)"""
+            cursor.execute(sql, (cod, nombre, cantidad, stockmax, stockmin, fecha_ing, fecha_egr, fecha_vto, precio))
             self.conn.commit()

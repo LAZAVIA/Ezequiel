@@ -16,7 +16,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
         self.setupUi(self)
         
         #--------------------Events--------------------------------------
-        self.x = self.btn_create.clicked.connect(lambda:self.ap_controller.agregarProducto(self.input_nombre.string, AgregarProducto))
+        self.x = self.btn_agregar.clicked.connect(lambda:self.ap_controller.agregar_producto(self.input_nombre.string, AgregarProducto))
         #cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio, AgregarProducto
         #--------------------End Events---------------------------------
 
