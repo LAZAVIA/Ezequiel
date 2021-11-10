@@ -1,4 +1,8 @@
- 
+import sys
+import os
+myDir = os.getcwd()
+sys.path.append(myDir)
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -117,8 +121,6 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     ConsultarStock = QtWidgets.QMainWindow()
     ui = Ui_ConsultarStock()
-    ui.setupUi(
-        
-    )
+    ui.setupUi()
     ConsultarStock.show()
     sys.exit(app.exec_())

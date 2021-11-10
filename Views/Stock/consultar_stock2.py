@@ -10,9 +10,7 @@ from Views.Stock.agregar_producto import Ui_AgregarProducto
 class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
-
         self.cs_controller = ConsultarStockController(self)
-
         self.setupUi(self)
         
         #--------------------Events--------------------------------------
@@ -27,3 +25,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     app.exec_()
+    
