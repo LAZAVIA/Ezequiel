@@ -56,7 +56,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="input_cod">
+      <widget class="QLineEdit" name="input_codigo">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -94,7 +94,7 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="lbl_nombre_2">
+      <widget class="QLabel" name="lbl_stockMaximo">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -123,7 +123,7 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="lbl_nombre_3">
+      <widget class="QLabel" name="lbl_stockMinimo">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -205,7 +205,7 @@
       </widget>
      </item>
      <item row="7" column="0">
-      <widget class="QLabel" name="lbl_fecha_ingreso_2">
+      <widget class="QLabel" name="lbl_fecha_egreso">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -219,7 +219,7 @@
       </widget>
      </item>
      <item row="7" column="1">
-      <widget class="QLineEdit" name="input_fechaEgreso">
+      <widget class="QLineEdit" name="input_fecha_egreso">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
