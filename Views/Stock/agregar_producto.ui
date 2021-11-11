@@ -24,17 +24,31 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="input_precio">
+     <item row="2" column="0">
+      <widget class="QLabel" name="lbl_cantidad">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
-       <property name="placeholderText">
-        <string>precio</string>
+       <property name="text">
+        <string>Cantidad: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="lbl_stockMaximo">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Stock Máximo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -52,76 +66,8 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QPushButton" name="btn_borrar">
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>BORRAR</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QPushButton" name="btn_agregar">
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>AGREGAR</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="lbl_stockMinimo">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Stock Mínimo: </string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="input_stockMinimo">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="placeholderText">
-        <string>stockMínimo</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="input_cantidad">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="placeholderText">
-        <string>cantidad</string>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="lbl_cantidad">
+      <widget class="QLabel" name="lbl_cantidad_3">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -130,7 +76,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Cantidad: </string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Stock Mínimo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -148,30 +94,31 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="input_stockMaximo">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lbl_codigo">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string/>
-       </property>
-       <property name="placeholderText">
-        <string>stockMáximo</string>
+        <string>Código: </string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="input_nombre">
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="input_cantidad">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="placeholderText">
-        <string>nombre</string>
+        <string>cantidad</string>
        </property>
       </widget>
      </item>
@@ -187,31 +134,57 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="lbl_codigo">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="input_nombre">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
-       <property name="text">
-        <string>Código: </string>
+       <property name="placeholderText">
+        <string>nombre</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="lbl_stockMaximo">
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="input_stockMaximo">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
-       <property name="text">
-        <string>Stock Máximo: </string>
+       <property name="placeholderText">
+        <string>stockMáximo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="input_precio">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>precio</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="input_stockMinimo">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>stockMínimo</string>
        </property>
       </widget>
      </item>
@@ -238,6 +211,26 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_agregar">
+    <property name="geometry">
+     <rect>
+      <x>315</x>
+      <y>522</y>
+      <width>125</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>AGREGAR</string>
     </property>
    </widget>
   </widget>
