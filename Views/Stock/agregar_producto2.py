@@ -1,13 +1,13 @@
 import sys
 import os
-from Views.Stock.agregar_producto import AgregarProducto
-from consultar_stock import *
+
+from agregar_producto3 import *
 myDir = os.getcwd()
 sys.path.append(myDir)
 
 from Controllers.agregar_producto_contr import AgregarProductoController
 
-class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
+class MainWindow(QtWidgets.QMainWindow, Ui_Ezequiel):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
 
@@ -16,8 +16,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
         self.setupUi(self)
         
         #--------------------Events--------------------------------------
-        self.x = self.btn_agregar.clicked.connect(lambda:self.ap_controller.agregar_producto(self.input_nombre.string, AgregarProducto))
-        #cod,lote, nombre, detalle, cantidad, fecha_ing, fecha_venc, precio, AgregarProducto
+        self.x = self.btn_agregar.clicked.connect(lambda:self.ap_controller.agregar_producto(self.input_nombre.string, Ui_Ezequiel))
+        #cod, nombre, cantidad, stock maximo, stock minimo, precio, AgregarProducto
         #--------------------End Events---------------------------------
 
 if __name__ == "__main__":
