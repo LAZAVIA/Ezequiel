@@ -164,8 +164,6 @@ class Ui_Ezequiel(object):
         self.input_stockMinimo.setPlaceholderText(_translate("Ezequiel", "stockMinimo"))
         self.lbl_cantidad.setText(_translate("Ezequiel", "Cantidad: "))
         self.input_cantidad.setPlaceholderText(_translate("Ezequiel", "cantidad"))
-       
-        
         self.lbl_precio.setText(_translate("Ezequiel", "Precio: "))
         self.input_precio.setPlaceholderText(_translate("Ezequiel", "precio"))
         self.btn_agregar.setText(_translate("Ezequiel", "AGREGAR"))

@@ -87,7 +87,7 @@ class Ui_login(object):
         self.btnEnter.setText(_translate("login", "Ingresar"))
         self.lblUsername.setText(_translate("login", "Nombre de usuario"))
         self.lblPassword.setText(_translate("login", "Contraseña"))
-        self.lblUsername_2.setText(_translate("login", "Bienvenido a la Clínica Cruz Azul"))
+        self.lblUsername_2.setText(_translate("login", "Bienvenido a EZEQUIEL"))
         self.btnEnter_2.setText(_translate("login", "Registrarse"))
 
 
