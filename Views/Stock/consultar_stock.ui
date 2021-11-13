@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Principal</class>
- <widget class="QMainWindow" name="Principal">
+ <class>ConsultarStock</class>
+ <widget class="QMainWindow" name="ConsultarStock">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,21 +11,21 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ezequiel</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>20</y>
-      <width>451</width>
+      <y>21</y>
+      <width>531</width>
       <height>421</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0" colspan="5">
-      <widget class="QLabel" name="lbl_consultar_stock">
+     <item row="0" column="0" colspan="4">
+      <widget class="QLabel" name="label">
        <property name="font">
         <font>
          <pointsize>22</pointsize>
@@ -64,22 +64,27 @@
        <row/>
        <column>
         <property name="text">
-         <string>CODIGO</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
          <string>NOMBRE</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>PRECIO</string>
+         <string>CANTIDAD</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>CATEGORIA</string>
+         <string>STOCK MINIMO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>STOCK MÁXIMO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>PRECIO</string>
         </property>
        </column>
       </widget>

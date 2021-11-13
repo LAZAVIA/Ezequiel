@@ -21,8 +21,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ConsultarStock):
         #--------------------End Events---------------------------------
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-    window = MainWindow()
-    window.show()
-    app.exec_()
-    
+   app = QtWidgets.QApplication([])
+   window = MainWindow()
+   window.show()
+   app.exec_()

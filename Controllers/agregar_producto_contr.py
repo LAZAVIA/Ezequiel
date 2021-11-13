@@ -11,7 +11,7 @@ class AgregarProductoController():
         self.product = Product(connection())
         self.agregar_producto = AgregarProducto
     
-    def agregarProducto(self, cod, nombre, cantidad, stockmax, stockmin, fecha_ing, fecha_egr, fecha_vto, precio, AgregarProducto):
-        if cod and nombre and cantidad and stockmax and stockmin and fecha_ing and fecha_egr and fecha_vto and precio:
-            self.product.insertProduct(cod, nombre, cantidad, stockmax, stockmin, fecha_ing, fecha_egr, fecha_vto, precio)
+    def agregar_producto(self, nombre, cantidad, stockmax, stockmin, precio, AgregarProducto):
+        if nombre and cantidad and stockmax and stockmin and precio:
+            self.product.insertProduct(nombre, cantidad, stockmax, stockmin, precio)
             AgregarProducto.hide()

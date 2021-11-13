@@ -26,9 +26,9 @@ class ConsultarStockController():
     def showProduct(self):
         table = self.ConsultarStock.table_product
         if table.currentItem() != None:
-            cod = table.currentItem().text()
-            print(cod)
-            product = self.product.getProduct(cod)
+            nombre = table.currentItem().text()
+            print(nombre)
+            product = self.product.getProduct(nombre)
             if product:
                 print(product)
                 msg = QMessageBox()
@@ -39,7 +39,8 @@ class ConsultarStockController():
 
                 msg.setStandardButtons(QMessageBox.Ok)
                 msg.setDefaultButton(QMessageBox.Ok)
-                msg.setInformativeText('Codigo: '+product[0]+'\nNombre: '+product[1]+'\nPrecio: '+product[2]+'\nCategoria: '+product[3])
+                msg.setInformativeText('Nombre: '+product[0]+'\nCantidad: '+product[2]+'\nStock Mínimo: '+product[3]
+                                       +'\nStock Máximo: '+product[4] +'\nPrecio: '+product[5])
 
                 x = msg.exec_()
     
@@ -64,12 +65,12 @@ class ConsultarStockController():
     def deleteProduct(self):
         table = self.ConsultarStock.table_product
         if table.currentItem() != None:
-            cod = table.currentItem().text()
-            product = self.product.getProduct(cod)
+            nombre = table.currentItem().text()
+            product = self.product.getProduct(nombre)
             if product:
-                self.product.deleteProduct(cod)
+                self.product.deleteProduct(nombre)
         self.listProducts()
-    #REVISAR
+    
     def openCreate(self, Ui_AgregarProducto):
         self.ConsultarStock.Form = QtWidgets.QWidget()
         self.ConsultarStock.ui = Ui_AgregarProducto()
